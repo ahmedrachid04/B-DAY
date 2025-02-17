@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffcccb;
+            padding-top: 50px;
+        }
+        h1 {
+            font-size: 50px;
+            color: #ff4081;
+            animation: throb 1.5s infinite alternate ease-in-out;
+        }
+        img {
+            width: 300px;
+            margin-top: 20px;
+        }
+
+        /* Throbbing animation */
+        @keyframes throb {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🎉 HAPPY BIRTHDAY RIHAB! 🎂</h1>
+    <p>Wishing you a day as amazing as the friend you are and filled with joy and laughter!</p>
+    <p>Enjoy your day and have fun</p>
+    <p>(but not too much fun 😉)</p>
+    <img src="cake.gif" alt="Birthday Cake">
+
+    <!-- Background music -->
+    <audio id="birthdayMusic" autoplay loop>
+        <source src="bday.mp3" type="audio/mpeg">
+        (if you're not hearing music play me in an other browser the song really is good)
+    </audio>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const audio = document.getElementById("birthdayMusic");
+
+            // Ensure audio plays when the user interacts with the page (some browsers block autoplay)
+            document.body.addEventListener("click", function() {
+                if (audio.paused) {
+                    audio.play();
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
