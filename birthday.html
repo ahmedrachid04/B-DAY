@@ -44,16 +44,18 @@
     </audio>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const audio = document.getElementById("birthdayMusic");
+        const audio = document.getElementById("birthdayMusic");
 
-            // Ensure audio plays when the user interacts with the page (some browsers block autoplay)
-            document.body.addEventListener("click", function() {
-                if (audio.paused) {
-                    audio.play();
-                }
+        // Function to play audio on user interaction
+        function playAudio() {
+            audio.play().catch((error) => {
+                console.log("Autoplay blocked:", error);
             });
-        });
+        }
+
+        // Add event listeners for user interaction
+        document.body.addEventListener("click", playAudio);
+        document.body.addEventListener("touchstart", playAudio);
     </script>
 
 </body>
