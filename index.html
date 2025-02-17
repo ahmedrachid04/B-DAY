@@ -59,10 +59,11 @@
     <script>
         function checkAnswer() {
             const correctName = "ahmed"; // Replace with your actual name
+            const correctName2 = "ahmad";
             const userInput = document.getElementById("bestFriendInput");
             const errorMessage = document.getElementById("errorMessage");
 
-            if (userInput.value.trim().toLowerCase() === correctName.toLowerCase()) {
+            if (userInput.value.trim().toLowerCase() === correctName.toLowerCase() || userInput.value.trim().toLowerCase() === correctName2.toLowerCase()) {
                 document.body.classList.add("fade-out"); // Apply fade-out effect
 
                 setTimeout(() => {
